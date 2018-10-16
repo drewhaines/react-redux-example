@@ -8,13 +8,14 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import Home from './components/Home';
 import Books from './containers/Books';
+import BookShow from './containers/BookShow';
 import Users from './containers/Users';
 import Reducers from './reducers/Index';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // create the redux store
-const store = createStore(
+export const store = createStore(
   Reducers,
   compose(
     applyMiddleware(thunk, logger),
@@ -34,8 +35,9 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Route exact path="/" component={Home} />
-            <Route path="/books" component={Books} />
-            <Route path="/users" component={Users} />
+            <Route exact path="/books" component={Books} />
+            <Route exact path="/books/show" component={BookShow} />
+            <Route exact path="/users" component={Users} />
           </div>
         </BrowserRouter>
       </Provider>

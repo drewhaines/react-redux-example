@@ -23,18 +23,13 @@ class Books extends Component {
     return (
       <div className='text-center'>
         <Container fluid={true}>
-          <br/>
           <Row>
             <Col>
               <h1>Books</h1>
-              <br/>
-              <br/>
               { this.renderBooks(books) }
             </Col>
             <Col>
               <h1>New Book</h1>
-              <br/>
-              <br/>
               <BookForm />
             </Col>
           </Row>

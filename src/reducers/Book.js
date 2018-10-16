@@ -1,10 +1,14 @@
 import * as actionTypes from '../actions/ActionTypes';
 
 const initialState = {
-  attributes: {},
+  attributes: { name: '', author: '', genre: ''},
   form: {
     attributes: { name: '', author: '', genre: ''},
     errors: { name: '', author: '', genre: '' },
+    genreOptions: [
+      {id: 1, text: 'Fiction'},
+      {id: 2, text: 'History'}
+    ],
     loading: false,
   },
   books: []

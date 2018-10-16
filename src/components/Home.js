@@ -4,6 +4,10 @@ import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
+  componentWillMount() {
+    alert('Component mounted')
+  }
+
   render() {
     return (
       <div className='text-center'>

@@ -3,17 +3,21 @@ import { Container, Row, Col } from 'reactstrap';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-export default class Home extends Component {
-  componentWillMount() {
-    alert('Component mounted')
+const styles = {
+  header: {
+    color: 'red',
+    fontSize: 36
   }
+}
+
+export default class Home extends Component {
 
   render() {
     return (
       <div className='text-center'>
         <Container fluid={true}>
           <br/>
-          <h1>Home</h1>
+          <h1 style={styles.header}>Home</h1>
           <br/>
           <br/>
           <Row>
